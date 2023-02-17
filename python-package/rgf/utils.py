@@ -213,6 +213,7 @@ class Config(object):
                               "RGF estimators will be unavailable for usage.")
 
             cls.FASTRGF_AVAILABLE = True
+            """
             if cls.is_fastrgf_executable(cls.CURRENT_DIR, verbose):
                 cls.FASTRGF_PATH = cls.CURRENT_DIR
             elif cls.is_fastrgf_executable(cls.DEFAULT_FASTRGF_PATH, verbose):
@@ -223,7 +224,7 @@ class Config(object):
                 cls.FASTRGF_AVAILABLE = False
                 warnings.warn("Cannot find FastRGF executable files. "
                               "FastRGF estimators will be unavailable for usage.")
-
+            """
         return cls.RGF_PATH, cls.RGF_AVAILABLE, cls.FASTRGF_PATH, cls.FASTRGF_AVAILABLE
 
 
